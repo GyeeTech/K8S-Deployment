@@ -1,0 +1,12 @@
+# Create the deployment
+$ kubectl apply -f deployment.yaml
+
+# Update a deployment
+$ kubectl --record deployment.apps/nginx-deployment set image deployment.v1.apps/nginx-deployment nginx=nginx:1.9.1
+
+# Check version changed using:
+$ kubectl describe deployment nginx-deployment
+
+# Revert an update
+$ kubectl rollout undo deployment.v1.apps/nginx-deployment
+
