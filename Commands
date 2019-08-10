@@ -13,3 +13,11 @@ $ kubectl describe deployment nginx-deployment
 # Revert an update
 $ kubectl rollout undo deployment.v1.apps/nginx-deployment
 
+# Expose the Nginx deployment using load balalncer service
+$ kubectl expose deployment nginx-deployment --port=80 --type=LoadBalancer
+
+# Get the service URL
+$ minikube service nginx-deployment --url
+
+# Get apps logs
+kubectl logs -l app=nginx
