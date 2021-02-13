@@ -1,11 +1,13 @@
 # Create the deployment
 $ kubectl apply -f deployment.yaml
+OR
+$ kubectl apply -f https://raw.githubusercontent.com/Dgotlieb/K8S-Deployment/master/deployment.yaml
 
 # View all deplyments
 $ kubectl get deployments
 
 # Update a deployment
-$ kubectl --record deployment.apps/nginx-deployment set image deployment.v1.apps/nginx-deployment nginx=nginx:1.9.1
+$ kubectl --record deployment.apps/nginx-deployment set image deployment.v1.apps/nginx-deployment nginx=nginx:1.19.6
 
 # Check version changed using:
 $ kubectl describe deployment nginx-deployment
