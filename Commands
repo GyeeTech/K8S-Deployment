@@ -1,7 +1,7 @@
 # Create the deployment
 $ kubectl apply -f deployment.yaml
 OR
-$ kubectl apply -f https://raw.githubusercontent.com/Dgotlieb/K8S-Deployment/master/deployment.yaml
+$ kubectl apply -f https://raw.githubusercontent.com/GyeeTech/K8S-Deployment/master/deployment.yaml
 
 # View all deplyments
 $ kubectl get deployments
